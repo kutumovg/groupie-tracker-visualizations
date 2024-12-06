@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ui/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <title>Groupie Tracker</title>
+</head>
+<body>
+    <header class="header_container">
+        <header>
+            <div class="big-container header-content">
+                <h1><a class="header_title" href="/">Groupie Tracker</a> </h1>
+            </div>
+        </header>
+        <main class="main_container">
+            <div class="large_container main_content">
+                {{range .Artists}}
+                <div class="list">                  
+                    <a class="list_item" href="/artist/{{.ID}}">
+                        <img class="item_image" src="{{.Image}}" alt="{{.Name}}" >
+                        <p class="item_name">{{.Name}}</p>
+                    </a>
+                </div>
+            {{end}}
+            </div>
+        </main>    
+</body>
+</html>

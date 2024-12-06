@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/ui/artist.css">
+        <title>{{.Name}}</title>
+    </head>
+    <body> 
+        <header class="header_container">
+            <h1><a class="header_title" href="/">Groupie Tracker</a></h1>   
+        </header>
+
+        <main class="main_container">
+            <div class="group">
+                <h3 class="group_name">{{.Name}}</h3>
+                <img class="group_img" src="{{.Image}}" alt="{{.Name}}">
+                <h4>Creation Date: {{.CreationDate}}</h4>
+                <h4>Date of first album: {{.FirstAlbum}}</h4>           
+                <h4>Members:</h4>
+                <ul>
+                    {{range .Members}}
+                    <li>{{.}}</li>
+                    {{end}}
+                </ul>
+                <h4>Concert Dates and Locations:</h4>
+                <ul>
+                    {{range $city, $date := .Relations}}
+                    <h4>{{$city}}</h4>
+                    {{range $date}}
+                    <li>{{.}}</li>
+                    {{end}}<br>
+                    {{end}}
+                </ul>
+                <a href="/" class="home-button">Home</a>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'a_dripping_markerregular';
+    src: url('fonts/adrip1-webfont.woff2') format('woff2'),
+         url('fonts/adrip1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+     font-family: "Ubuntu Mono", monospace;
+     color: black;
+     margin: 0px;
+     background: url("bg.png");
+ }
+ 
+a {
+    text-decoration: none;
+    list-style: none;
+}
+ 
+h1 {
+    text-align: center;
+    margin: 0px;
+    padding-top: 20px;
+}
+
+.big_container {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.large_container {
+    max-width: 2800px;
+    margin: 0 auto;
+}
+
+.header_container {
+    font-style: normal;
+    font-weight: bold;
+    color: #333333;
+}
+
+.header_title {
+    color: #202329;
+    font-size: 70px;
+    font-family: "a_dripping_markerregular", sans-serif;
+}
+
+.header_title:hover {
+    color: #474c57;
+    transition: .3s;
+}
+
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main_container {
+    padding-top: 20px;
+}
+
+.main_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list_item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 0.5rem;
+    width: 270px;
+    height: 350px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.list_item:hover {
+    background: #55575e;
+    transition: .5s;
+    color: #f5f5f5;
+}
+
+.item_image {
+    max-width: 271px;
+    max-height: 240px;
+    border-radius: 0.5rem;
+    margin-top: 13px;
+    border-radius: 50%;
+}
+
+.item_name {
+    padding: 10px 0;
+    font-size: 25px;
+    /* color: #333333; */
+}
